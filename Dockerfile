@@ -12,6 +12,3 @@ RUN apt-get install -y /tmp/vectors.deb && rm -f /tmp/vectors.deb && \
 USER 1001
 ENV POSTGRESQL_EXTRA_FLAGS="-c shared_preload_libraries=vectors.so"
 
-
-
-docker.io/bitnami/postgresql-repmgr:16.3.0-debian-12-r11
