@@ -1,4 +1,4 @@
-ARG PGVECTORS_TAG=pg16-v0.1.13-arm64
+ARG PGVECTORS_TAG=pg16-v0.3.0-arm64
 ARG BITNAMI_TAG=16.3.0-debian-12-r11
 FROM scratch as nothing
 FROM tensorchord/pgvecto-rs-binary:${PGVECTORS_TAG} as binary
