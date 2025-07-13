@@ -1,4 +1,4 @@
-# Bitnami Postgres-repmgr images w/ vchord
+# Bitnami Postgres-repmgr images w/ vchord & vecto.rs support
 
 I need this for the immich helm chart - I doubt I will continue to use this long term, but it works for now. Use at your own risk.
 
