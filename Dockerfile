@@ -16,5 +16,5 @@ RUN apt-get install -y /tmp/vchord.deb && rm -f /tmp/vchord.deb && \
      mv /usr/lib/postgresql/*/lib/vchord.so /opt/bitnami/postgresql/lib/ && \
      mv usr/share/postgresql/*/extension/vchord* opt/bitnami/postgresql/share/extension/
 USER 1001
-ENV POSTGRESQL_EXTRA_FLAGS="-c shared_preload_libraries='vchord.so, vectors.so, vector.so'"
+ENV POSTGRESQL_EXTRA_FLAGS="-c shared_preload_libraries=vchord.so,vectors.so,vector.so"
 
