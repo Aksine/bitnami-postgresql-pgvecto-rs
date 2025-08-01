@@ -1,4 +1,4 @@
-ARG BITNAMI_TAG=16.6.0-debian-12-r2
+ARG BITNAMI_TAG=14.5.0-debian-11-r6
 
 FROM docker.io/bitnami/postgresql:${BITNAMI_TAG}
 USER root
