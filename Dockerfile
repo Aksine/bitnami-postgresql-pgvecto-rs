@@ -1,4 +1,4 @@
-ARG BITNAMI_TAG=14.5.0-debian-11-r6
+ARG BITNAMI_TAG=14.15.0-debian-12-r2
 
 FROM docker.io/bitnami/postgresql:${BITNAMI_TAG}
 USER root
@@ -6,7 +6,7 @@ ADD "https://github.com/tensorchord/pgvecto.rs/releases/download/v0.3.0/vectors-
 RUN apt-get install -y /tmp/vectors.deb && rm -f /tmp/vectors.deb && \
      mv /usr/lib/postgresql/*/lib/vectors.so /opt/bitnami/postgresql/lib/ && \
      mv usr/share/postgresql/*/extension/vectors* opt/bitnami/postgresql/share/extension/
-ADD "https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.0-1.pgdg110+1_amd64.deb" /tmp/pgvector.deb
+ADD "https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.0-1.pgdg120+1_amd64.deb" /tmp/pgvector.deb
 RUN dpkg -x /tmp/pgvector.deb pgvector && rm -f /tmp/pgvector.deb && \
      mv pgvector/usr/lib/postgresql/*/lib/vector.so /opt/bitnami/postgresql/lib/ && \
      mv pgvector/usr/share/postgresql/*/extension/* opt/bitnami/postgresql/share/extension/ && \
